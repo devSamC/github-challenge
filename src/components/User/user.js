@@ -2,7 +2,7 @@ import React from 'react'
 
 function User({url}) {
     return (
-        <img src={url} className="user-avatar" alt="github-user-avatar"/>
+        <img src={url} className="userImg" alt="github-user-avatar"/>
     )
 }
 
