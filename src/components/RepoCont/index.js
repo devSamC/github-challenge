@@ -2,6 +2,7 @@ import React from 'react'
 // import {Link} from 'react-router-dom'
 // import { selectRepo } from '../../actions'
 import { useDispatch } from 'react-redux'
+import { GoRepoForked, GoTelescope, GoIssueOpened, GoMarkGithub } from "react-icons/go";
 
 function Item({ repo }) {
     // const dispatch = useDispatch()
@@ -13,13 +14,13 @@ function Item({ repo }) {
 
     return (
         <div className="repo-container">
-            <h3>{repo.name}</h3>
-            <div className="git-icons-container">
-                <p> {repo.forks}</p>
-                <p> {repo.stargazers_count}</p>
-                <p> {repo.open_issues}</p>
-            </div>
+        <h3><GoMarkGithub/>{repo.name}</h3>
+        <div className="git-icons-container">
+            <p><GoRepoForked /> {repo.forks}</p>
+            <p><GoTelescope /> {repo.stargazers_count}</p>
+            <p><GoIssueOpened /> {repo.open_issues}</p>
         </div>
+    </div>
     )
 }
 
