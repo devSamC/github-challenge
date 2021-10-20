@@ -9,6 +9,7 @@ import User from './components/User/user';
 import styled, { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "./components/NightDayMode/Colours"
 import {CgSun} from "react-icons/cg"
+import { GoMarkGithub } from "react-icons/go";
 
 const StyledApp = styled.div`
   color: ${(props) => props.theme.fontColor};
@@ -20,6 +21,7 @@ function App() {
   const username = useSelector(state => state.user.name);
   const loading = useSelector(state => state.loading);
   const error = useSelector(state => state.error)
+  console.log("error on app.js" + error);
 
   const dispatch = useDispatch();
 

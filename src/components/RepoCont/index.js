@@ -1,17 +1,21 @@
 import React from 'react'
-import { GoRepoForked, GoTelescope, GoIssueOpened, GoMarkGithub } from "react-icons/go";
+import { useSelector } from 'react-redux'
+import { GoRepoForked, GoTelescope, GoIssueOpened} from "react-icons/go";
 
 function Item({ repo }) {
     
-
+    const username = useSelector(state => state.user.name);
+    const url = `https://github.com/${username}/${repo.name}`
     return (
         <div className="repo-container">
-        <h3><GoMarkGithub/>{repo.name}</h3>
-        <div className="icons">
+        <a href={url} target="_blank" rel="noreferrer">
+        <h3>{repo.name}</h3>
+        <div className="git-icons-container">
             <p><GoRepoForked /> {repo.forks}</p>
             <p><GoTelescope /> {repo.stargazers_count}</p>
             <p><GoIssueOpened /> {repo.open_issues}</p>
         </div>
+        </a>
     </div>
     )
 }
