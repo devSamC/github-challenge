@@ -10,12 +10,13 @@ function Item({ repo }) {
         <div className="repo-container">
         <a href={url} target="_blank" rel="noreferrer">
         <h3>{repo.name}</h3>
+        </a>
         <div className="git-icons-container">
             <p><GoRepoForked /> {repo.forks}</p>
             <p><GoTelescope /> {repo.stargazers_count}</p>
             <p><GoIssueOpened /> {repo.open_issues}</p>
         </div>
-        </a>
+       
     </div>
     )
 }
