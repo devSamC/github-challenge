@@ -32,6 +32,7 @@ function SearchForm({ getResult }) {
                     <input type="submit" name="search" value="🔍" />
                 </div>
             </form>
+            {username && <p> Hello {username}</p>}
         </>
     );
 };
