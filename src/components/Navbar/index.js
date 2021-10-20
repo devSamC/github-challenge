@@ -3,7 +3,7 @@ import React from 'react'
 const Navbar = () => {
     return (
         <nav>
-            <h1>Github Repos</h1>
+            <h1>Github Repositories</h1>
         </nav>
     )
 }

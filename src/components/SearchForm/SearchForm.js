@@ -15,15 +15,21 @@ function SearchForm({ getResult }) {
         setUsername(input)
     }
 
- 
+    const [classList, setClassList] = useState('search-cont')
+    const handleActive = () => {
+        setClassList('search-cont active')
+    }
+    const dropActive = () => {
+        setClassList('search-cont')
+    }
 
     return (
         <>
-            <form aria-label="search-form" onSubmit={handleSubmit}>
+            <form  aria-label="search-form" onSubmit={handleSubmit}>
                 <label htmlFor="username" value="username"></label>
-                <div className ="search" >
-                    <input className="searchBar" autoComplete="off" type="text" id="username" value={username} placeholder="search for github user..." onChange={updateInput} />
-                    <input type="submit" name="search" value="🔍" />
+                <div  onClick={handleActive} onBlur={dropActive} className={classList}>
+                    <input className="searchInput" autoComplete="off" type="text" id="username" value={username} placeholder="search for github user..." onChange={updateInput} />
+                    <input className="submit" type="submit" name="search" value="🔍" />
                 </div>
             </form>
         </>

@@ -9,6 +9,7 @@ import User from './components/User/user';
 import styled, { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "./components/NightDayMode/Colours"
 import {CgSun} from "react-icons/cg"
+import {HiMoon} from "react-icons/hi"
 import { GoMarkGithub } from "react-icons/go";
 
 const StyledApp = styled.div`
@@ -41,7 +42,7 @@ function App() {
       <GlobalStyles />
         <StyledApp className="App">
           <Navbar />
-          <h1>Hello there</h1> <div onClick={themeToggler}><CgSun /></div> 
+          <div className="" onClick={themeToggler}>{theme==='light' ? <CgSun />:<HiMoon/>}</div> 
 
           <div id="search">
             <SearchForm getResult={search} />

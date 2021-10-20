@@ -1,7 +1,6 @@
 import axios from 'axios'
 
-export const setTheme = mode => ({ type: 'SET_MODE', payload: mode})
-export const toggleTheme = () => ({type: 'TOGGLE_MODE'})
+
 export const selectRepo = repo => ({type: 'SELECT_REPO', payload: repo})
 
 const loading = username => ({type: 'LOADING', payload: username})

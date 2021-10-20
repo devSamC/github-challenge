@@ -20,14 +20,11 @@
   flex-direction: row;
 }
 
-.repo-container:hover {
-  box-shadow: 3px 3px rgb(179, 177, 177);
 
-}
 
 .userImg {
   border-radius: 25%;
-  width: 300px;
+  width: 250px;
 }
 
 .icons {
@@ -35,12 +32,52 @@
   justify-content: space-evenly;
 }
 
-.search{
-  border: 3px black;
-}
-.searchBar {
-  height: 30px;
-  border-radius: 20px;
+
+.searchInput {
+  border: none;
+  width: 80%;
+  height: 100%;
+  border-radius: 30px 0 0 30px;
+  margin-left: -0.5px;
   text-align: center;
-  border:none;
+}
+.searchInput:focus {
+  outline: none;
+}
+
+.submit {
+  background-color: white;
+  border: transparent;
+  border-left: 0.5px solid;
+  margin-right: -0.5px;
+  height: 100%;
+  border-radius: 0 30px 30px 0;
+  width: 20%;
+}
+
+.submit:hover {
+  background-color: rgb(231, 230, 230);
+}
+
+.search-cont {
+  border: 2px solid;
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 42px;
+  border-radius: 50px;
+  width: 100%;
+  max-width: 350px;
+  margin-top: 1rem;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+.repoName {
+  text-decoration: none;
+  color: #F66F60;
 }
