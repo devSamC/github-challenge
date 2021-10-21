@@ -2,38 +2,82 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.repo-container {
+  margin: 40px;
+  border: 2px solid black;
+  padding: 20px;
+  min-width: 300px;
+  max-width: 300px;
+  border-radius: 5px;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
-}
-
-.App-header {
-  min-height: 100vh;
+.result-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+
+
+.userImg {
+  border-radius: 25%;
+  width: 250px;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.searchInput {
+  border: none;
+  width: 80%;
+  height: 100%;
+  border-radius: 30px 0 0 30px;
+  margin-left: -0.5px;
+  text-align: center;
+}
+.searchInput:focus {
+  outline: none;
+}
+
+.submit {
+  background-color: white;
+  border: transparent;
+  border-left: 0.5px solid;
+  margin-right: -0.5px;
+  height: 100%;
+  border-radius: 0 30px 30px 0;
+  width: 20%;
+}
+
+.submit:hover {
+  background-color: rgb(231, 230, 230);
+}
+
+.search-cont {
+  border: 2px solid;
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  height: 42px;
+  border-radius: 50px;
+  width: 100%;
+  max-width: 350px;
+  margin-top: 1rem;
+}
+
+form {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
-}
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.repoName {
+  text-decoration: none;
+  color: #F66F60;
 }
